@@ -9,4 +9,4 @@ Includes:
 * Application State
 
 # Packages
-* Vuex to handle application state
+* Vuex to handle application state.
