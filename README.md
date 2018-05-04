@@ -7,3 +7,6 @@ Includes:
 * Home component
 * About component
 * Application State
+
+# Packages
+* Vuex to handle application state
