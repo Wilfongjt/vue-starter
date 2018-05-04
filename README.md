@@ -8,5 +8,7 @@ Includes:
 * About component
 * Application State
 
-# Packages
-* Vuex to handle application state.
+# Dependencies
+* bootstrap-vue
+* vue-router
+* vuex to handle application state.
