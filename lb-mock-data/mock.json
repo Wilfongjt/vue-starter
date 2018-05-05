@@ -1,22 +1,15 @@
 {
-    "accounts": [
-      {
-        "id": 0,
-        "type": true,
-        "owner": "John Test",
-        "users": [
-          { "id": 1, "name": "John Test", "street": "2121 Main St", "city": "Grand Rapids", "create-date": "20180505" }
-        ],
-        "stores":[
-          {
-            "id": 1,
-            "name": "Whip It Up!",
-            "location": { "street": "2121 Main St", "city": "Grand Rapids", "create-date": "20180505" },
-            "specials": [
-              { "id": 1, "billing": 2.0, "type": "lunch", "price": 3.99, "special-date": "20180505", "title": "Gits and Gravey", "details": "Blah with blah and blah. blah."}
-            ]
-          }
-        ]
-      }
+    "meta": [
+        {
+            "id": 0,
+            "host": "who is running this site"
+        }
+    ],
+    "your-data": [
+        {
+            "id": 0,
+            "type": true,
+            "owner": "John Test"
+        }
     ]
 }
