@@ -8,7 +8,11 @@ Includes:
 * About component
 * Application State
 
+# lb-mock-data
+* launches json-server with mock.json file
+  * you can modifiy mock.json to suite the needs of your application.
+
 # Dependencies
-* bootstrap-vue
-* vue-router
-* vuex to handle application state.
+  * bootstrap-vue
+  * vue-router
+  * vuex to handle application state.
