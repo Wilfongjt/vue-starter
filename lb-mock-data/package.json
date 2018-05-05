@@ -1,0 +1,16 @@
+{
+  "name": "lb-mock-data",
+  "version": "1.0.0",
+  "description": "mockup data",
+  "main": "index.js",
+  "scripts": {
+    "dev": "json-server ./mock.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Wilfong <wilfongjt@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.12.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "meta": [
+        {
+            "id": 0,
+            "host": "who is running this site"
+        }
+    ],
+    "your-data": [
+        {
+            "id": 0,
+            "type": true,
+            "owner": "John Test"
+        }
+    ]
+}
