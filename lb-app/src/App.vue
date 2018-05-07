@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <lb-nav></lb-nav><!-- fixes the nav at top of page -->
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png" vspace="20">
     <lb-header></lb-header>
     <router-view></router-view> <!-- components injected here -->
     <lb-footer></lb-footer>
@@ -41,6 +41,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 </style>
