@@ -4,7 +4,7 @@
   "description": "mockup data",
   "main": "index.js",
   "scripts": {
-    "dev": "json-server ./mock.json",
+    "dev": "json-server -p 4000 ./mock.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "James Wilfong <wilfongjt@gmail.com>",
