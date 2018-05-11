@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    owner: 'your company x',
+    owner: 'Specials',
   },
   mutations: {
     // TODO impl mutations
