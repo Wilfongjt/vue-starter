@@ -1,15 +1,93 @@
 {
-    "meta": [
+    "host": [
         {
-            "id": 0,
-            "host": "who is running this site"
+            "id": 1,
+            "name": "wilfongj"
         }
     ],
-    "your-data": [
+    "accounts": [
         {
-            "id": 0,
+            "id": 1,
             "type": true,
-            "owner": "John Test"
+            "owner": "John Test",
+            "create-date": "20180505"
         }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "accountId": 1,
+            "name": "John Test",
+            "street": "2121 Main St",
+            "city": "Grand Rapids",
+            "create-date": "20180505"
+        }
+    ],
+    "stores": [
+        {
+            "id": 1,
+            "accountId": 1,
+            "name": "Whip It Up!",
+            "create-date": "20180505",
+            "location": {
+                "street": "2121 Main St",
+                "city": "Grand Rapids",
+                "create-date": "20180505"
+            }
+        },
+        {
+            "id": 2,
+            "accountId": 1,
+            "name": "Whip It Up II!",
+            "create-date": "20180505",
+            "location": {
+                "street": "2121 Main St",
+                "city": "Grand Rapids",
+                "create-date": "20180505"
+            }
+        }
+    ],
+    "specials": [
+        {
+            "id": 1,
+            "store": {
+                "id": 2,
+                "accountId": 1,
+                "name": "Whip It Up II!",
+                "create-date": "20180505",
+                "location": {
+                    "street": "2121 Main St",
+                    "city": "Grand Rapids",
+                    "create-date": "20180505"
+                }
+            },
+            "billing": 2.0,
+            "type": "lunch",
+            "price": 3.99,
+            "special-date": "20180505",
+            "title": "Kernel Swimming",
+            "details": "Gits and Gravey"
+        },
+        {
+            "id": 1,
+            "store": {
+                "id": 1,
+                "accountId": 1,
+                "name": "Golly It's Good!",
+                "create-date": "20180505",
+                "location": {
+                    "street": "2121 Main St",
+                    "city": "Grand Rapids",
+                    "create-date": "20180505"
+                }
+            },
+            "billing": 2.0,
+            "type": "lunch",
+            "price": 3.99,
+            "special-date": "20180505",
+            "title": "Mooing Potato",
+            "details": "Angus burger with side of tater-tots."
+        }
+
     ]
 }
