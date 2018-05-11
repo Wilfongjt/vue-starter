@@ -1,23 +1,57 @@
 <template>
   <div class="lb-home">
 
-    <h1>{{ msg }}</h1>
-    <h1>Coding Instructions</h1>
-    <ul>
-      <li>Remove instructions for production</li>
-      <li>source: Home.vue</li>
-    </ul>
+    <b-container class="bv-example-row">
+        <b-row v-for="special in home.specials">
+            <b-col><h4>{{special.store.name}}</h4>
+              <br/>waiting for you @ {{special.store.location.street}}
+              <br/><h1>{{special.title}}</h1>
+              <br/><h4>{{special.details}}</h4>
+              <br/><h2>${{special.price}}</h2>
+              <hr/>
+            </b-col>
+        </b-row>
 
+    </b-container>
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
+
   name: 'lb-home',
   data() {
     return {
-      msg: 'Home',
+      home: {
+        specials: [],
+      },
     };
+  },
+  methods: {
+    // TODO call to restful
+  },
+
+  created() {
+    axios.get('http://localhost:4000/specials')
+    .then((response) => {
+      // JSON responses are automatically parsed.
+      // this.posts = response.data;
+      // eslint-disable-next-line
+      console.log(response.data);
+      this.home.specials = response.data;
+    }).catch((e) => {
+      this.errors.push(e);
+    });
+    // async / await version (created() becomes async created())
+    //
+    // try {
+    //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
+    //   this.posts = response.data
+    // } catch (e) {
+    //   this.errors.push(e)
+    // }
   },
 };
 </script>
@@ -26,6 +60,7 @@ export default {
 <style scoped>
 h1, h2 {
   font-weight: normal;
+  color: #999999;
 }
 
 ul {
@@ -42,4 +77,6 @@ li {
 a {
   color: #42b983;
 }
+
+.col { border: 1px solid transparent; }
 </style>
