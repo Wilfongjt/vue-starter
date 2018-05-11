@@ -8,7 +8,7 @@
       <li>source: About.vue</li>
       <li>Describe yourself and the function of this application.</li>
     </ul>
-
+    
   </div>
 </template>
 
