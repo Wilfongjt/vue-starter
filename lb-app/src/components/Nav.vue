@@ -5,7 +5,7 @@
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-navbar-brand href="/">{{navigation.title}}</b-navbar-brand>
+      <b-navbar-brand href="/">{{getOwner}}</b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
 
@@ -60,6 +60,9 @@ export default {
       },
     };
   },
+  computed: {
+    getOwner() { return this.$store.state.owner; },
+  },
 };
 </script>
 
@@ -71,7 +74,7 @@ export default {
   text-align: center;
   /* color: #2c3e50; */
   color: #000000;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 h1, h2 {
