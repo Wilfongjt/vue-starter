@@ -20,7 +20,6 @@
 import axios from 'axios';
 
 export default {
-
   name: 'lb-home',
   data() {
     return {
@@ -38,20 +37,12 @@ export default {
     .then((response) => {
       // JSON responses are automatically parsed.
       // this.posts = response.data;
-      // eslint-disable-next-line
-      console.log(response.data);
+      // eslint//-disable-next-line
+      // console.log(response.data);
       this.home.specials = response.data;
     }).catch((e) => {
       this.errors.push(e);
     });
-    // async / await version (created() becomes async created())
-    //
-    // try {
-    //   const response = await axios.get(`http://jsonplaceholder.typicode.com/posts`)
-    //   this.posts = response.data
-    // } catch (e) {
-    //   this.errors.push(e)
-    // }
   },
 };
 </script>
