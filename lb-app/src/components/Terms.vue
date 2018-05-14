@@ -24,8 +24,12 @@ export default {
       errors: [],
     };
   },
+  computed: {
+    getService() { return this.$store.state.service; },
+  },
   created() {
-    axios.get('http://localhost:4000/host')
+    // axios.get('http://localhost:4000/host')
+    axios.get(this.$store.state.service.concat('/host'))
     .then((response) => {
       // JSON responses are automatically parsed.
       // eslint-disable-next-line
