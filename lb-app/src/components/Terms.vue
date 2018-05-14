@@ -1,24 +1,47 @@
 <template>
   <div class="lb-terms">
 
-    <h1>{{ msg }}</h1>
-    <h1>Coding Instructions</h1>
+    <h1>{{ terms.name }}</h1>
     <ul>
-      <li>Remove instructions for production</li>
-      <li>source: Terms.vue</li>
-      <li>Set expectations for terms of use.</li>
+      <li v-for="item in terms.policy"><h3>{{item.title}}</h3><h4>{{item.body}}</h4></li>
+
     </ul>
 
   </div>
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'lb-terms',
   data() {
     return {
-      msg: 'Terms of Use',
+      terms: {
+        name: 'Terms of Use',
+        policy: [],
+      },
+      errors: [],
     };
+  },
+  created() {
+    axios.get('http://localhost:4000/host')
+    .then((response) => {
+      // JSON responses are automatically parsed.
+      // eslint-disable-next-line
+      console.log('hi');
+
+      // eslint-disable-next-line
+      console.log(response.data);
+
+      this.terms.policy = response.data.policies.terms;
+      // eslint-disable-next-line
+      console.log(this.terms.policy);
+    }).catch((e) => {
+      this.errors.push(e);
+      // eslint-disable-next-line
+      console.log(e);
+    });
   },
 };
 </script>
