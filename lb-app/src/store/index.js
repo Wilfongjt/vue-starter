@@ -6,12 +6,14 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     owner: 'Specials',
+    service: 'http://localhost:4000',
   },
   mutations: {
     // TODO impl mutations
   },
   getters: {
     owner: state => state.owner,
+    service: state => state.service,
     // TODO impl getters
   },
   actions: {
